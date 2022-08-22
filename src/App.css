@@ -1,0 +1,151 @@
+:root {
+  --clr-primary-400: #fe395c;
+  --clr-secondary-400: #222222;
+
+  --clr-neutral-400: #ffffff;
+  --clr-neutral-500: #000000;
+
+  --clr-lightgrey: #918e9b;
+
+  --ff-primary: "Poppins", sans-serif;
+
+  --ff-body: var(--ff-primary);
+
+  --fw-thin: 300;
+  --fw-regular: 400;
+  --fw-sbold: 600;
+
+  --fs-200: 0.75rem;
+  --fs-400: 0.875rem;
+  --fs-600: 1rem;
+  --fs-700: 1.5rem;
+  --fs-800: 2rem;
+
+  --fs-body: var(--fs-600);
+  --fs-primary-heading: var(--fs-800);
+}
+
+.fw-thin {
+  font-weight: var(--fw-thin);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-sbold {
+  font-weight: var(--fw-sbold);
+}
+
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+  line-height: 1.1;
+}
+
+/* General Styles */
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  color: var(--clr-secondary-400);
+  line-height: 1.5;
+}
+
+.container {
+  --max-width: 500px;
+  --container-padding: 1rem;
+
+  width: min(var(--max-width), 100% - var(--container-padding) * 2);
+  margin: 0 auto;
+}
+
+/* header */
+.header {
+  background: var(--clr-neutral-400);
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+/* logo */
+.logo {
+  width: 5.125rem;
+  padding: 1.375rem 0;
+}
+
+/* Main Section */
+.photo-grid {
+  padding-block: 1rem;
+}
+
+@media (min-width: 30em) {
+  .photo-grid {
+    margin: 22px 0 30px 77px;
+  }
+}
+
+.project-info > h1 {
+  padding-block: 1rem;
+}
+
+.project-info > p {
+  line-height: 1.3;
+  width: 35ch;
+}
+
+/* Card Component */
+.card-components {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.2rem;
+  padding-block: 3rem;
+  overflow-x: auto;
+}
+
+.cards {
+  font-size: var(--fs-200);
+  font-weight: var(--fw-thin);
+  position: relative;
+}
+
+.card-image {
+  width: 176px;
+  /* height: 235px; */
+}
+
+.card-ranks {
+  margin-top: 9px;
+}
+
+.red-star {
+  font-size: var(--fs-400);
+  color: var(--clr-primary-400);
+}
+
+.rating,
+.rank,
+.country {
+  margin-left: 2px;
+}
+
+.rank,
+.country {
+  color: var(--clr-lightgrey);
+}
+
+.card-description {
+  padding-block: 6px;
+}
+
+.price {
+  font-weight: var(--fw-sbold);
+}
+
+/* Card badge */
+.card-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  padding: 4px 6px;
+  background: var(--clr-neutral-400);
+  border-radius: 2px;
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+}
